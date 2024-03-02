@@ -26,4 +26,4 @@ COPY --chown=node:node ./package*.json ./
 RUN npm install --production
 COPY --chown=node:node --from=build /home/node/app/build .
 EXPOSE $PORT
-CMD ["dumb-init", "node", "server.js"]
+CMD ["dumb-init", "node", "bin/server.js"]
